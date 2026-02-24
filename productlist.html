@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <title>Apparel</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html" class="logo">FuckingFashion</a>
+    </header>
+
+    <section class="product-list">
+      <h1>Apparel</h1>
+
+      <div class="product-grid">
+        <!-- Normal produkt -->
+        <a href="product.html" class="product-card">
+          <div class="image-wrapper">
+            <img src="img/hvid-tshirt.webp" alt="T-shirt" />
+          </div>
+          <h2>Hvid T-shirt</h2>
+          <p class="brand">Nike</p>
+          <p class="price">299 kr</p>
+        </a>
+
+        <!-- Tilbud -->
+        <a href="product.html" class="product-card">
+          <div class="image-wrapper">
+            <img src="img/white-pants.webp" alt="Bukser" />
+          </div>
+
+          <h2>Hvide Bukser</h2>
+          <p class="brand">Adidas</p>
+
+          <div class="discount">
+            <p class="price">399 kr</p>
+            <span class="offer-label">Tilbud, 200 kr</span>
+          </div>
+        </a>
+
+        <!-- Udsolgt -->
+        <a href="product.html" class="product-card soldout">
+          <div class="image-wrapper">
+            <span class="sold-label">Udsolgt</span>
+            <img src="img/hvid-cap.webp" alt="Hvid Cap" />
+          </div>
+          <h2>Hvid Cap</h2>
+          <p class="brand">Puma</p>
+          <p class="price">199 kr</p>
+        </a>
+
+        <!-- Både tilbud og udsolgt -->
+        <a href="product.html" class="product-card soldout">
+          <div class="image-wrapper">
+            <span class="sold-label">Udsolgt</span>
+            <img src="img/white-shoes.webp" alt="Hvide Sko" />
+          </div>
+
+          <h2>Hvide Sko</h2>
+          <p class="brand">Nike</p>
+
+          <div class="discount">
+            <p class="price">149 kr</p>
+            <span class="offer-label">Tilbud, 100 kr</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
