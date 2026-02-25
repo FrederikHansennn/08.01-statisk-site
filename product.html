@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html" class="logo">FuckingFashion</a>
+    </header>
+
+    <main class="product-page">
+      <!-- Venstre: Billede -->
+      <section class="product-media">
+        <a href="productlist.html" class="tilbage-knap">Tilbage</a>
+        <img
+          src="https://kea-alt-del.dk/t7/images/webp/640/1164.webp"
+          alt="Sports-trøje"
+        />
+      </section>
+
+      <!-- Midten: Produktinformation -->
+      <section class="product-info">
+        <h1>Product Information</h1>
+
+        <ul>
+          <li>
+            <span class="label">Model name</span><br />
+            Sahara National jersey
+          </li>
+          <li>
+            <span class="label">Color</span><br />
+            Blue
+          </li>
+          <li>
+            <span class="label">Inventory number</span><br />
+            1163
+          </li>
+        </ul>
+
+        <h2>Nike</h2>
+        <p>Nike, creating experiences for today’s athlete</p>
+      </section>
+
+      <!-- Højre: Køb-boks -->
+      <aside class="product-buy">
+        <h2>Sahara National jersey</h2>
+        <p>Nike</p>
+
+        <p class="price">
+          <span class="old-price">299 kr</span>
+          <span class="sold-label">Udsolgt</span>
+        </p>
+        <p class="stock-status out">Ikke på lager</p>
+
+        <label for="size">Choose a size:</label>
+        <select id="size" name="size">
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+
+        <button disabled>Add to basket</button>
+      </aside>
+    </main>
+  </body>
+</html>

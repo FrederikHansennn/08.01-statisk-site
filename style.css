@@ -3,21 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* index.html */
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr; /* MOBILE: 1 kolonne */
   gap: 20px;
 }
 
 .categories {
   margin-top: 30px;
   margin: 0 auto;
-  max-width: 1200px;
+  margin: 15px;
 }
 
 .card {
-  padding: 40px;
+  padding: 20px; /* MOBILE: mindre padding så det ikke føles gigantisk */
   border: 1px solid #fff;
   background-color: #b0d5d9;
 }
@@ -27,6 +28,7 @@ h1 {
   margin-bottom: 1rem;
   margin-top: 1em;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -36,21 +38,21 @@ a {
   width: 100px;
   height: auto;
   font-size: 40px;
-  margin-left: 50px;
+  margin-left: 20px; /* MOBILE: mindre margin så den ikke skubber */
   margin-bottom: 35px;
   font-family: "Syne Mono", monospace;
 }
 
 /* productlist.html */
-
 .product-list {
   margin: 0 auto;
   padding: 20px;
+  max-width: 1200px;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr; /* MOBILE: 1 kolonne */
   gap: 20px;
 }
 
@@ -62,7 +64,7 @@ a {
 
 .image-wrapper {
   position: relative;
-  height: 350px;
+  height: 260px; /* MOBILE: lavere, så det ikke bliver for langt */
   overflow: hidden;
 }
 
@@ -70,7 +72,7 @@ a {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: black;
+  background: rgb(149, 2, 2);
   color: white;
   padding: 6px 10px;
   font-size: 14px;
@@ -78,7 +80,7 @@ a {
 
 .offer-label {
   box-sizing: border-box;
-  background: red;
+  background: rgb(195, 201, 31);
 }
 
 .discount {
@@ -92,4 +94,160 @@ a {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* produc.html */
+.product-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; /* MOBILE: lidt mindre padding */
+  display: grid;
+  grid-template-columns: 1fr; /* MOBILE: alt under hinanden */
+  gap: 25px;
+  align-items: start;
+}
+
+.product-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-buy {
+  background-color: #e5e5e5;
+  padding: 20px; /* MOBILE: lidt mindre */
+}
+
+.product-buy > * {
+  margin-bottom: 15px;
+}
+
+.product-buy button {
+  width: 100%;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.tilbage-knap {
+  display: inline-block;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.product-buy select {
+  width: 100%;
+  padding: 10px;
+}
+
+.product-buy .price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* BUGFIX: for at justify-content virker */
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-buy .sold-label {
+  position: static;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.product-info h2 {
+  font-size: 32px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.product-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-info li {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.stock-status {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.stock-status.out {
+  color: red;
+}
+
+/* ---------- BREAKPOINTS ---------- */
+
+/* TABLET */
+@media (min-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-wrapper {
+    height: 300px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    padding: 40px; /* tilbage til din desktop padding */
+  }
+
+  .logo {
+    margin-left: 50px; /* tilbage til din desktop margin */
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tilbage-knap {
+    display: block;
+    width: 20%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .image-wrapper {
+    height: 350px; /* tilbage til din desktop height */
+  }
+
+  .product-page {
+    padding: 40px 20px;
+    grid-template-columns: 1.2fr 1fr 0.8fr; /* desktop: 3 kolonner */
+    gap: 40px;
+  }
+
+  .product-buy {
+    padding: 30px; /* tilbage til din desktop padding */
+  }
 }
