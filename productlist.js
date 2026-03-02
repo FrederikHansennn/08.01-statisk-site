@@ -25,7 +25,7 @@ function showdata(data) {
     console.log(element);
     // Her bygges HTML'en uden at tjekke for discount eller udsolgt
     markup += ` <article class="product-card">
-          <a href="product.html">
+          <a href="product.html?id=${element.id}">
             <div class="image-wrapper">
               <span class="sold-label">Udsolgt</span>
               <img
