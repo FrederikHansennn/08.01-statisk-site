@@ -27,7 +27,7 @@ function showdata(data) {
     markup += ` <article class="product-card">
           <a href="product.html?id=${element.id}">
             <div class="image-wrapper">
-              <span class="sold-label">Udsolgt</span>
+              ${element.soldout ? "<span class='sold-label'>Udsolgt</span>" : ""}
               <img
                 src="https://kea-alt-del.dk/t7/images/webp/640/${element.id}.webp"
                 alt="Cardigan"
@@ -39,7 +39,7 @@ function showdata(data) {
 
             <div class="discount">
               <p class="price">${element.price} Kr.</p>
-              <span class="offer-label">${element.discount}</span>
+              ${element.discount ? "<span class='offer-label'>" + element.discount + "% rabat</span>" : ""}
             </div>
           </a>
         </article>`;

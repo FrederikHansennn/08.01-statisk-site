@@ -161,10 +161,6 @@ a {
   position: static;
 }
 
-.old-price {
-  text-decoration: line-through;
-}
-
 .product-info h2 {
   font-size: 32px;
   margin-top: 30px;

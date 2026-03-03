@@ -49,10 +49,10 @@ function showdata(data) {
         <p>${data.brandname}</p>
 
         <p class="price">
-          <span class="old-price">${data.price}kr</span>
-          <span class="sold-label">Udsolgt</span>
+         <span>${Math.round(data.price - (data.price * data.discount) / 100)},-</span>
+          ${data.soldout ? "<span class='sold-label'>Udsolgt</span>" : ""}
         </p>
-        <p class="stock-status out">Ikke på lager</p>
+        
 
         <label for="size">Choose a size:</label>
         <select id="size" name="size">
